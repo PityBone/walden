@@ -1,0 +1,37 @@
+server:
+  port: 5647
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://oopsn.com:3306/questionnaire_survey?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: oops7788
+  data:
+    mongodb:
+      host: 39.98.115.98
+      port: 27017
+      database: oops
+      username:
+      password:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+mybatis:
+  check-config-location: false
+  mapper-locations: classpath:mapper/**/*Mapper.xml
+  type-aliases-package: com.oops.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+
