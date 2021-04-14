@@ -43,7 +43,6 @@ public class WaldenIndexController {
     @RequestMapping("/index")
     public String index(Model model) {
         model.addAttribute("name", "jack");
-
         model.addAttribute("age", 20);
         model.addAttribute("info", "我是一个爱学习的好青年");
         return "index";
