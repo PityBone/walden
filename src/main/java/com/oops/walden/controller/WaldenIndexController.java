@@ -25,11 +25,6 @@ public class WaldenIndexController {
     @Resource
     private UserInfoService userInfoService;
 
-    @GetMapping(value = "index")
-    public String index(){
-        return "hello word";
-    }
-
     @GetMapping(value = "getMessage")
     public R getMessage(@RequestParam(value = "message") String message){
         return userInfoService.getMessage(message);
