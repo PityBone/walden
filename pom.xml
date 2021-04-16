@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.oops</groupId>
-	<artifactId>walden</artifactId>
-	<version>1.0.1</version>
+	<artifactId>jekins</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>walden</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
