@@ -1,6 +1,7 @@
 package com.oops.walden.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.oops.walden.annotation.RecordLog;
 import com.oops.walden.entity.R;
 import com.oops.walden.entity.UserInfo;
 import com.oops.walden.service.UserInfoService;
@@ -18,7 +19,7 @@ import javax.annotation.Resource;
  * @Description:
  * @Date: Create in 22:53 2021/4/12
  */
-@Controller
+@RestController
 @RequestMapping(value = "walden")
 public class WaldenIndexController {
 
@@ -31,6 +32,7 @@ public class WaldenIndexController {
     }
 
     @GetMapping(value = "getUserInfoById")
+    @RecordLog
     public R getUserInfoById(@RequestParam(value = "userId") String userId){
         UserInfo userInfo = userInfoService.getOne(Wrappers.<UserInfo>lambdaQuery().eq(UserInfo::getUserId, userId));
         return R.ok(userInfo);
