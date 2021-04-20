@@ -32,7 +32,7 @@ public class WaldenIndexController {
     }
 
     @GetMapping(value = "getUserInfoById")
-    @RecordLog
+    @RecordLog(module = "getUserInfoById")
     public R getUserInfoById(@RequestParam(value = "userId") String userId){
         UserInfo userInfo = userInfoService.getOne(Wrappers.<UserInfo>lambdaQuery().eq(UserInfo::getUserId, userId));
         return R.ok(userInfo);
