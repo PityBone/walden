@@ -1,14 +1,57 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <link href="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F91%2F72%2F3756f17decda3f5.jpg&refer=http%3A%2F%2Fbpic.588ku.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621145606&t=f4a532e9b778fa431388d46385ce5146" type="image/x-icon" rel="shortcut icon">
+    <meta charset=utf-8>
+    <meta name=author content="Dandy Weng">
+    <meta name=viewport content="initial-scale=1,minimum-scale=1,maximum-scale=1,viewport-fit=cover">
+    <link href=images/icons/favicon.svg rel=icon>
+    <link href=images/launchscreens/iphone5_splash.png media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/iphone6_splash.png media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/iphoneplus_splash.png media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/iphonex_splash.png media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/iphonexr_splash.png media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/iphonexsmax_splash.png media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/ipad_splash.png media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/ipadpro1_splash.png media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/ipadpro3_splash.png media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link href=images/launchscreens/ipadpro2_splash.png media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)"
+          rel=apple-touch-startup-image>
+    <link rel=preconnect href=https://api.camarts.app/ crossorigin>
+    <link rel=preconnect href=https://ncdn.camarts.cn/ crossorigin>
+    <title>Camarts</title>
+    <link href=https://static.camarts.cn/css/app.bbdd50ce.css rel=stylesheet crossorigin=anonymous integrity=sha384-n0grH3cyN2XeSJh5PU6nS90lLxP/XGKPlE/5osCOi+DLHeWIrSNuHmsJ2u+c/AbT>
+    <link rel=icon type=image/png sizes=32x32 href=https://static.camarts.cn/images/icons/favicon-32x32.png crossorigin=anonymous>
+    <link rel=icon type=image/png sizes=16x16 href=https://static.camarts.cn/images/icons/favicon-16x16.png crossorigin=anonymous>
+    <link rel=manifest href=https://static.camarts.cn/manifest.json crossorigin=anonymous>
+    <meta name=theme-color content=#505050>
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black-translucent>
+    <meta name=apple-mobile-web-app-title content=Camarts>
+    <link rel=apple-touch-icon href=https://static.camarts.cn/images/icons/apple-touch-icon.png crossorigin=anonymous>
+    <link rel=mask-icon href=https://static.camarts.cn/images/icons/safari-pinned-tab.svg color=#505050 crossorigin=anonymous>
+    <meta name=msapplication-TileImage content=https://static.camarts.cn/images/icons/msapplication-icon-144x144.png>
+    <meta name=msapplication-TileColor content=#000000>
 </head>
-<body>
-姓名：<input type="text" th:value="${name}"><br/>
-年龄：<input type="text" th:value="${age}"><br/>
-简介：<input type="text" th:value="${info}"><br/>
-<img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201607%2F26%2F20160726135721_YKkML.thumb.224_0.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621144456&t=1a8a0019c3dce180199e1f3363bfe059">
+<body ontouchstart>
+<div id=app></div>
+<p style="position: absolute; text-indent: -9999px;">
+    <script src="https://s96.cnzz.com/z_stat.php?id=1276096217&web_id=1276096217&async=1" async></script>
+</p>
+<script type=module src=https://static.camarts.cn/js/chunk-vendors.84f30914.js crossorigin=anonymous integrity=sha384-GeqKbxsBKlgXTvUI0bM9Kw2vnmREc0ENiWaoQj7d5b25bU5bpgF0zMX7xe5xp/U7>
+</script> <script type=module src=https://static.camarts.cn/js/app.fc94a3bc.js crossorigin=anonymous integrity=sha384-qOinyT3ulCuMnn+j+IL5XYJNq3IKgxf2xHr6ypAgKHcFYu2/40nnN1Uav97TyqL4>
+</script> <script>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()},!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
+<script src=https://static.camarts.cn/js/chunk-vendors-legacy.1242c8c7.js crossorigin=anonymous integrity=sha384-4lNFJVuWEEHZvu8s9Vv4uH36fOv+QczqoN783laIwD9eHQGLLzP0OeRWvho+X8qh
+        nomodule></script>
+<script src=https://static.camarts.cn/js/app-legacy.258074aa.js crossorigin=anonymous integrity=sha384-FrFza6+PRRLnTil9MyB7Cp0oh7uci6YsSioBnum2Z1Pb699lpQyIM5ItlxC105ts
+        nomodule></script>
 </body>
 </html>
