@@ -19,7 +19,7 @@ import javax.annotation.Resource;
  * @Description:
  * @Date: Create in 22:53 2021/4/12
  */
-@RestController
+@Controller
 @RequestMapping(value = "walden")
 public class WaldenIndexController {
 
