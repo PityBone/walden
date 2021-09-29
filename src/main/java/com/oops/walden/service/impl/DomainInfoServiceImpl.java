@@ -26,51 +26,56 @@ public class DomainInfoServiceImpl extends ServiceImpl<DomainInfoMapper, DomainI
 
     @Override
     public String getDomainInfo() {
-        String[] a = {"a", "b", "c", "d" , "e" , "f",
-                "g", "h", "i", "j" , "k" , "l",
-                "m", "n", "o", "p" , "q" , "r",
-                "s", "t", "u", "v" , "w" , "x",
-                "y", "z" };
+   new Thread(){
+       @Override
+       public void run(){
+           String[] a = {"a", "b", "c", "d" , "e" , "f",
+                   "g", "h", "i", "j" , "k" , "l",
+                   "m", "n", "o", "p" , "q" , "r",
+                   "s", "t", "u", "v" , "w" , "x",
+                   "y", "z" };
 
-        for (int i = 0; i < 26; i++) {
-            for (int j = 0; j < 26; j++) {
-                for (int k = 0; k < 26; k++) {
-                    for (int l = 0; l < 26; l++) {
-                        String area_domain = a[i] + a[j] + a[k] + a[l] + ".com";
-                        try {
-                            URL url = new URL("http://panda.www.net.cn/cgi-bin/check.cgi?area_domain=" + area_domain);
-                            java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
-                            connection.setRequestMethod("GET");
-                            connection.setConnectTimeout(10000);  //毫秒
-                            connection.setReadTimeout(5000);
+           for (int i = 0; i < 26; i++) {
+               for (int j = 0; j < 26; j++) {
+                   for (int k = 0; k < 26; k++) {
+                       for (int l = 0; l < 26; l++) {
+                           String area_domain = a[i] + a[j] + a[k] + a[l] + ".com";
+                           try {
+                               URL url = new URL("http://panda.www.net.cn/cgi-bin/check.cgi?area_domain=" + area_domain);
+                               java.net.HttpURLConnection connection = (java.net.HttpURLConnection) url.openConnection();
+                               connection.setRequestMethod("GET");
+                               connection.setConnectTimeout(10000);  //毫秒
+                               connection.setReadTimeout(5000);
 
-                            InputStream inputStream = new BufferedInputStream(connection.getInputStream());
+                               InputStream inputStream = new BufferedInputStream(connection.getInputStream());
 
-                            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-                            String line = "";  //每次读取一行数据
-                            String reg = "<original>(.*?)</original>";  //正则
-                            while((line = reader.readLine()) != null){
-                                if(line.matches(reg)){
+                               BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+                               String line = "";  //每次读取一行数据
+                               String reg = "<original>(.*?)</original>";  //正则
+                               while((line = reader.readLine()) != null){
+                                   if(line.matches(reg)){
 //                  System.out.println(line);
-                                    //只有两种状态，210表示可用，211表示不可用
-                                    String state = line.substring(10, 13);
-                                    if("210".equals(state)){
-                                        System.out.println(area_domain + ":" + true);
-                                        saveDomainInfo(area_domain, true, null);
-                                    }else{
-                                        System.out.println(area_domain + ":" +false);
-                                        saveDomainInfo(area_domain, false, null);
-                                    }
-                                }
-                            }
+                                       //只有两种状态，210表示可用，211表示不可用
+                                       String state = line.substring(10, 13);
+                                       if("210".equals(state)){
+                                           System.out.println(area_domain + ":" + true);
+                                           saveDomainInfo(area_domain, true, null);
+                                       }else{
+                                           System.out.println(area_domain + ":" +false);
+                                           saveDomainInfo(area_domain, false, null);
+                                       }
+                                   }
+                               }
 
-                        }  catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-        }
+                           }  catch (Exception e) {
+                               e.printStackTrace();
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }.start();
         return null;
     }
 
