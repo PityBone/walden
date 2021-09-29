@@ -3,9 +3,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://oopsn.com:3306/questionnaire_survey?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://39.98.115.98:3306/walden?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: oops7788
+    password: 123456
   data:
     mongodb:
       host: 39.98.115.98
