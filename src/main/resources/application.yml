@@ -13,6 +13,12 @@ spring:
       database: oops
       username:
       password:
+  redis:
+    database: 0
+    host: 39.98.115.98
+    port: 6379
+    password: oops7788
+    timeout: 10000
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
@@ -32,6 +38,7 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
 
 
 

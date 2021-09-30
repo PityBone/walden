@@ -2,6 +2,7 @@ package com.oops.walden.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import lombok.Data;
  */
 @Data
 @Builder
+@TableName(value = "domain_info_2")
 public class DomainInfo {
 
     @TableId(type = IdType.AUTO)

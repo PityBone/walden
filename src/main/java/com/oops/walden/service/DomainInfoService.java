@@ -9,4 +9,6 @@ import com.oops.walden.entity.DomainInfo;
  */
 public interface DomainInfoService extends IService<DomainInfo> {
     String getDomainInfo();
+
+    String getDomainInfoByDomain(String domain);
 }
