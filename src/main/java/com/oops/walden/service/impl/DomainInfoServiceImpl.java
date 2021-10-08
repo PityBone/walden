@@ -45,10 +45,8 @@ public class DomainInfoServiceImpl extends ServiceImpl<DomainInfoMapper, DomainI
                    for (int j = 0; j < 26; j++) {
                        for (int k = 0; k < 26; k++) {
                            for (int l = 0; l < 26; l++) {
-                               for (int m = 0; m < 26; m++) {
-                                   String domain = PARAMS[i] + PARAMS[j] + PARAMS[k] + PARAMS[l] + PARAMS[m] + ".com";
+                                   String domain = PARAMS[i] + PARAMS[j] + PARAMS[k] + PARAMS[l] + ".com";
                                    checkDomain(domain);
-                               }
                            }
                        }
                    }
