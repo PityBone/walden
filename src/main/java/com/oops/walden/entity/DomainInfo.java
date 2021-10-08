@@ -12,7 +12,7 @@ import lombok.Data;
  */
 @Data
 @Builder
-@TableName(value = "domain_info_2")
+@TableName(value = "domain_info_3")
 public class DomainInfo {
 
     @TableId(type = IdType.AUTO)
